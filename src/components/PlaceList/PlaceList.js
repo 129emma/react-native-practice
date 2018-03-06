@@ -1,5 +1,5 @@
 import React from 'react';
-import { ScrollView, StyleSheet } from 'react-native';
+import { FlatList, StyleSheet } from 'react-native';
 
 import ListItem from '../ListItem/ListItem';
 
@@ -7,21 +7,20 @@ import ListItem from '../ListItem/ListItem';
 // react native doesn't have any press function, but it can import from react touchabal--function
 const placeList = props =>{
 
-  // add a function before render text input
-  // bind placeName from listItem.js to place in this function
-  const placesOutput = props.places.map((place, i) => (
-    <ListItem
-    key = {i}
-    placeName={place}
-    onItemPressed={
-      ()=> props.onItemDeleted(i)
-    }
-    />
-  ));
   return (
-    <ScrollView style={styles.listContainer}>
-    {placesOutput}
-    </ScrollView>
+    <FlatList
+      style={styles.listContainer}
+      data={props.places}
+      renderItem={(info) => (
+        <ListItem
+          placeName={info.item.value}
+          onItemPressed={() => props.onItemDeleted(info.item.key)}
+        />
+      )}
+    />
+    // using flatlist instead of
+    // {placesOutput}
+
   );
 };
 
