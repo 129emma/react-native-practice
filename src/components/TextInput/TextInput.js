@@ -5,7 +5,6 @@ class PlaceInput extends Component {
   state ={
     placeName:''
   };
-
   // create a function
   placeNameChangedHandler = value => {
     // alert(event);
