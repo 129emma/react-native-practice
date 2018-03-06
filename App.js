@@ -4,6 +4,7 @@ import { StyleSheet, View } from 'react-native';
 
 import PlaceInput from './src/components/TextInput/TextInput';
 import PlaceList from './src/components/PlaceList/PlaceList';
+// import placeImage from './src/components/assets/avatar.jpg';
 
 export default class App extends React.Component {
 
@@ -17,7 +18,11 @@ export default class App extends React.Component {
       return {
         places: prevState.places.concat({
           key: Math.random(),
-          value: placeName
+          value: placeName,
+          // image: placeImage
+          image: {
+            uri:"https://static1.squarespace.com/static/55f87b70e4b04ad8ee195f88/5746b6d48259b543b3ff6e2a/5746b70059827edb581deb2c/1464252176186/TOYSTORYICON.png"
+          }
         })
       };
     });
