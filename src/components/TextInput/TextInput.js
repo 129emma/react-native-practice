@@ -52,7 +52,9 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   placeInput: {
-    width: '70%'
+    width: '70%',
+    borderBottomColor:'lightgrey',
+    borderBottomWidth:0.3
   },
   placeButton: {
     width: '30%'

@@ -1,8 +1,10 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { ScrollView, StyleSheet } from 'react-native';
 
 import ListItem from '../ListItem/ListItem';
 
+
+// react native doesn't have any press function, but it can import from react touchabal--function
 const placeList = props =>{
 
   // add a function before render text input
@@ -12,14 +14,14 @@ const placeList = props =>{
     key = {i}
     placeName={place}
     onItemPressed={
-      ()=> alert('Item pressed!' + i)
+      ()=> props.onItemDeleted(i)
     }
     />
   ));
   return (
-    <View style={styles.listContainer}>
+    <ScrollView style={styles.listContainer}>
     {placesOutput}
-    </View>
+    </ScrollView>
   );
 };
 
