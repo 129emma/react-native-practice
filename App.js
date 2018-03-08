@@ -35,6 +35,27 @@ export default class App extends React.Component {
     });
    };
 
+   //click delete button in modal window
+   placeDeletedHandler = () => {
+     this.setState(prevState => {
+       return{
+         places:prevState.places.filter(place => {
+           return place.key !== prevState.selectedPlace.key;
+
+         }),
+         selectedPlace: null
+       }
+     });
+   }
+
+   //click close button in modal window to close the modal
+   // in PlaceDetails, it's already use visible property to check the selectedPlace
+   modalClosedHandler =() => {
+    this.setState({
+      selectedPlace:null
+    });
+   }
+
     // 8 March, 2018
     // create a modal to popup a window when item is selected
     // change item delete function to select function
@@ -71,7 +92,10 @@ export default class App extends React.Component {
 
       <View style={styles.container}>
         {/* pass information to placedetail */}
-        <PlaceDetail selectedPlace={this.state.selectedPlace}/>
+        <PlaceDetail 
+        selectedPlace={this.state.selectedPlace} 
+        onItemDeleted={this.placeDeletedHandler} 
+        onModalClosed={this.modalClosedHandler}/>
         <PlaceInput onPlaceAdded={this.placeAddedHandler} />
         {/* change onItemDeleted to onItemSelected, which means when click item, it will show a popup window */}
         <PlaceList

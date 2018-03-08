@@ -28,8 +28,8 @@ const placeDetail = props => {
            {/* if select place is set, then render modalContent  */}
            {modalContent}
             <View>
-                <Button title="Delete" />
-                <Button title="Add" />    
+                <Button title="Delete" onPress={props.onItemDeleted} />
+                <Button title="Close" onPress={props.onModalClosed}/>    
             </View>    
 
          </View>
