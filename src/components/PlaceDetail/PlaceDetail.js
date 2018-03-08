@@ -28,8 +28,8 @@ const placeDetail = props => {
            {/* if select place is set, then render modalContent  */}
            {modalContent}
             <View>
-                <Button title="Delete" onPress={props.onItemDeleted} />
-                <Button title="Close" onPress={props.onModalClosed}/>    
+                <Button title="Delete" onPress={props.onItemDeleted} color="#d6bcbc"/>
+                <Button title="Close" onPress={props.onModalClosed} color="#bcd6d2"/>    
             </View>    
 
          </View>
@@ -68,7 +68,8 @@ const styles = StyleSheet.create({
     modalContainer:{
         margin: 20,
         alignItems:"center",
-        paddingTop:30
+        paddingTop:30,
+        backgroundColor: '#f7f8f9'
     },
     palceImage: {
         height:100,
@@ -76,6 +77,9 @@ const styles = StyleSheet.create({
     },
     textStyle: {
         textAlign:'center'
+    },
+    imageContainer:{
+       
     }
 
 });
