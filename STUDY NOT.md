@@ -8,4 +8,4 @@ Mar 7, 2018
 - using uri property
 - for web image, we have to set size for that
 
-##
+## using menu on smimulator to debug

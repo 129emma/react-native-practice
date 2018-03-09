@@ -24,6 +24,9 @@ class App extends Component {
   // create a handler for save input content
   placeAddedHandler = placeName => {
     this.props.onAddPlace(placeName);
+    // use console log to debug
+    console.log('item Added');
+    
 
     // this.setState(prevState => {
     //   return {
