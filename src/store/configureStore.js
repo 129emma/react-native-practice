@@ -6,11 +6,11 @@ const rootReducer = combineReducers({
 
 });
 
-// add mutiple enhancers in our school
+// add mutiple enhancers in our  - for debug
 
 let composeEnhancers = compose;
 
-// dev is speical golobal variable only in react native, it only true if you in develop model
+// dev is speical golobal variable only in react native, it only true if you in develop model - for debug
 if(__DEV__){
     composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 }
