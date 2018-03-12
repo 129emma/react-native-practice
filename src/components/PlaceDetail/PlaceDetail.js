@@ -3,6 +3,7 @@ import { Modal, View, Image, Button, Text, StyleSheet, TouchableOpacity } from '
 // import icon library
 import Icon from 'react-native-vector-icons/Ionicons';
 
+
 const placeDetail = props => {
 
     let modalContent = null;
@@ -32,7 +33,9 @@ const placeDetail = props => {
             <View>
                 {/* add icon button */}
                 <TouchableOpacity>
-                    <Icon size={20} name="ios-trash" color="#d6bcbc" />
+                    <View style={styles.iconContainer}>
+                    <Icon size={20} name="ios-trash-outline" color="#d6bcbc" onPress={props.onItemDeleted}  />
+                    </View>
                 </TouchableOpacity>    
                 {/* <Button title="Delete" onPress={props.onItemDeleted} color="#d6bcbc"/> */}
                 <Button title="Close" onPress={props.onModalClosed} color="#bcd6d2"/>    
@@ -86,6 +89,9 @@ const styles = StyleSheet.create({
     },
     imageContainer:{
        
+    },
+    iconContainer: {
+        alignItems:'center'
     }
 
 });
