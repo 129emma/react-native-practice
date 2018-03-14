@@ -1,11 +1,24 @@
 import { Navigation } from 'react-native-navigation';
+import { Provider }  from 'react-redux';
+
 import AuthScreen from './src/screens/Auth/Auth';
+import SharePlaceScreen from './src/screens/SharePlace/SharePlace';
+import FindPlaceScreen from './src/screens/FindPlace/FindPlace';
+
+import configureStore from './src/store/configureStore'
+
+
+// highlight: configureSotre is a function
+const conStore = configureStore();
+
 
 
 
 // register screen
 // "appname.unique identifier of screen", function
-Navigation.registerComponent("yes-i-made-it.AuthScreen", () => AuthScreen);
+Navigation.registerComponent("yes-i-made-it.AuthScreen", () => AuthScreen, conStore, Provider);
+Navigation.registerComponent("yes-i-made-it.SharePlaceScreen", () => SharePlaceScreen, conStore, Provider);
+Navigation.registerComponent("yes-i-made-it.FindPlaceScreen", () => FindPlaceScreen, conStore, Provider);
 
 // Start app
 Navigation.startSingleScreenApp({

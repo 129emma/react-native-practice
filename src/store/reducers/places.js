@@ -1,9 +1,9 @@
-import { ADD_PLACE, DELETE_PLACE, SELECT_PLACE, DESELECT_PLACE } from "../actions/actionTypes";
+import { ADD_PLACE, DELETE_PLACE } from "../actions/actionTypes";
 
 const initialState = {
     places: [],
     // store select information, initially is null
-    selectedPlace:null
+    // selectedPlace:null
 }
 // set state argument in this function to a default value
 // so in this function, if state havn't set, it will start with initialState value
@@ -36,23 +36,23 @@ const reducer = (state = initialState ,action) => {
               selectedPlace: null
         };
         
-        case SELECT_PLACE:
-        return {
-            ...state,
-            selectedPlace: state.places.find(place => {
-                // in there, it will look each object and check if object it's true, otherwise it's false
-                // // referring to the selectPlace function in place.js 
-                return place.key === action.placeKey;
-              })
-        };
+        // case SELECT_PLACE:
+        // return {
+        //     ...state,
+        //     selectedPlace: state.places.find(place => {
+        //         // in there, it will look each object and check if object it's true, otherwise it's false
+        //         // // referring to the selectPlace function in place.js 
+        //         return place.key === action.placeKey;
+        //       })
+        // };
 
-        case DESELECT_PLACE:
-        return {
-            ...state,
-            selectedPlace: null
-        }
-        default:
-            return state;
+        // case DESELECT_PLACE:
+        // return {
+        //     ...state,
+        //     selectedPlace: null
+        // }
+        // default:
+        //     return state;
     }
 };
 
