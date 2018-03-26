@@ -21,7 +21,7 @@ Navigation.registerComponent("yes-i-made-it.AuthScreen", () => AuthScreen, conSt
 Navigation.registerComponent("yes-i-made-it.SharePlaceScreen", () => SharePlaceScreen, conStore, Provider);
 Navigation.registerComponent("yes-i-made-it.FindPlaceScreen", () => FindPlaceScreen, conStore, Provider);
 // move placedetail to screen folder and register it as the new screen
-Navigation.registerComponent("yes-i-made-it.PlaceDetailScreen", () => PlaceDetail, conStore, Provider);
+Navigation.registerComponent("yes-i-made-it.PlaceDetailScreen", () => PlaceDetailScreen);
 
 // Start app
 Navigation.startSingleScreenApp({
