@@ -15,11 +15,13 @@ const startTabs = () => {
         Navigation.startTabBasedApp({
             tabs: [
                 {
-                    // assign screen
+                    // assign screen and give the name of button
                     screen: "yes-i-made-it.FindPlaceScreen",
                     label: "Find Place",
                     title: "It's find place page!",
-                    icon: sources[0]
+                    icon: sources[0],
+                    // selectedIcon: this function only workds for IOS
+                
                 },
                 {
                     screen: "yes-i-made-it.SharePlaceScreen",

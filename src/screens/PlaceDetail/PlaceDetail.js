@@ -6,30 +6,32 @@ import Icon from 'react-native-vector-icons/Ionicons';
 
 const placeDetail = props => {
 
-    let modalContent = null;
+    // let modalContent = null;
     
-    if (props.selectedPlace){
-        modalContent = (
+    // if (props.selectedPlace){
+    //     modalContent = (
+           
+    //     );
+    // }
+    return (
+        // visible property can control the visibility of modal
+        // in there, bind visible property to a boolean to check if the selectPlace is not null
+        // if it's null, modal will invisible 
+        // animationType will assing the animation type for shwoing modal
+        // <Modal 
+        // visible={props.selectedPlace !== null}
+        // animationType="slide"
+        // >
+         <View style={styles.modalContainer}>
+           {/* if select place is set, then render modalContent  */}
+           {/* {modalContent} */}
+
             <View style={styles.imageContainer}>
             <Image source={props.selectedPlace.image} style={styles.palceImage} />
             <Text style={styles.textStyle}>
             {props.selectedPlace.name}    
             </Text>    
             </View>
-        );
-    }
-    return (
-        // visible property can control the visibility of modal
-        // in there, bind visible property to a boolean to check if the selectPlace is not null
-        // if it's null, modal will invisible 
-        // animationType will assing the animation type for shwoing modal
-        <Modal 
-        visible={props.selectedPlace !== null}
-        animationType="slide"
-        >
-         <View style={styles.modalContainer}>
-           {/* if select place is set, then render modalContent  */}
-           {modalContent}
             <View>
                 {/* add icon button */}
                 <TouchableOpacity>
@@ -38,12 +40,12 @@ const placeDetail = props => {
                     </View>
                 </TouchableOpacity>    
                 {/* <Button title="Delete" onPress={props.onItemDeleted} color="#d6bcbc"/> */}
-                <Button title="Close" onPress={props.onModalClosed} color="#bcd6d2"/>    
+                {/* <Button title="Close" onPress={props.onModalClosed} color="#bcd6d2"/>     */}
             </View>    
 
          </View>
 
-       </Modal>    
+    //    </Modal>    
 
 
     )
