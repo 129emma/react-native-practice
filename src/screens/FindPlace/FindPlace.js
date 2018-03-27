@@ -4,6 +4,9 @@ import { connect } from 'react-redux';
 
 import PlaceList from '../../components/PlaceList/PlaceList';
 
+
+
+
 class FindPlaceScreen extends Component {
     itemSelectedHandler = key => {
         const selecPlaceName = this.props.places.find(place => {
@@ -22,7 +25,9 @@ class FindPlaceScreen extends Component {
     render () {
         return (
             <View>
-                <PlaceList places={this.props.places} onItemSelected={this.itemSelectedHandler} />
+                <PlaceList 
+                places={this.props.places} 
+                onItemSelected={this.itemSelectedHandler} />
             </View>
         );
     }
