@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginTop:25
+    padding:13
   },
   placeInput: {
     width: '70%',

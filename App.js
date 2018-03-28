@@ -5,6 +5,7 @@ import AuthScreen from './src/screens/Auth/Auth';
 import SharePlaceScreen from './src/screens/SharePlace/SharePlace';
 import FindPlaceScreen from './src/screens/FindPlace/FindPlace';
 import PlaceDetailScreen from './src/screens/PlaceDetail/PlaceDetail';
+import SideDrawerScreen from './src/screens/SideDrawer/SideDrawer';
 
 import configureStore from './src/store/configureStore'
 
@@ -22,6 +23,8 @@ Navigation.registerComponent("yes-i-made-it.SharePlaceScreen", () => SharePlaceS
 Navigation.registerComponent("yes-i-made-it.FindPlaceScreen", () => FindPlaceScreen, conStore, Provider);
 // move placedetail to screen folder and register it as the new screen
 Navigation.registerComponent("yes-i-made-it.PlaceDetailScreen", () => PlaceDetailScreen, conStore, Provider);
+Navigation.registerComponent("yes-i-made-it.SideDrawerScreen", () => SideDrawerScreen, conStore, Provider);
+
 
 // Start app
 Navigation.startSingleScreenApp({
@@ -32,6 +35,7 @@ Navigation.startSingleScreenApp({
 
   }
 });
+
 
 
 
