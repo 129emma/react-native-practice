@@ -26,3 +26,7 @@ Thereafter, in your project folder, you can run ``react-native link``  to automa
 
 Important: ALWAYS check the docs (e.g. on the Github repo page) of the library you're using! You definitely have to ensure that no additional steps are required!
 
+## why use StyleSheet
+- It validates the styles.
+- it "sends them to the native code" more efficiently
+- it can be used in everywhere
