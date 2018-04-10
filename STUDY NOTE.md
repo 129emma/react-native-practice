@@ -30,3 +30,6 @@ Important: ALWAYS check the docs (e.g. on the Github repo page) of the library y
 - It validates the styles.
 - it "sends them to the native code" more efficiently
 - it can be used in everywhere
+
+## backgroundImage
+- when using ImageBackground, we need to set a width for screen
