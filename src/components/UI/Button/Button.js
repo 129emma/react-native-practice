@@ -1,17 +1,15 @@
 import React from 'react';
-import { TouchableHightlight, Text, View } from 'react-native';
+import { TouchableOpacity, Text, View, StyleSheet } from 'react-native';
 
 const buttonWithBackground = props => (
-    <TouchableHightlight onPress={props.onPress}>
+    <TouchableOpacity onPress={props.onPress}>
         <View style={[styles.button, {backgroundColor: props.color}]}>
-            <Text>
-                {props.children}
-            </Text>    
-        </View>    
-    </TouchableHightlight>    
+            <Text>{props.children}</Text>
+        </View>
+    </TouchableOpacity>
 );
 
-const styles = StyleSheet.creat({
+const styles = StyleSheet.create({
     button: {
         padding: 10,
         margin:5
@@ -19,3 +17,4 @@ const styles = StyleSheet.creat({
 })
 
 export default buttonWithBackground;
+

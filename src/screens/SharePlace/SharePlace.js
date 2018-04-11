@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, TextInput, Button } from 'react-native';
 import { connect } from 'react-redux';
 
 import PlaceInput from '../../components/TextInput/TextInput';
@@ -33,8 +33,21 @@ class SharePlaceScreen extends Component {
     render () {
         return (
             <View>
-                {/* onPlaceAdded is the property from textinput.js file  */}
-                <PlaceInput onPlaceAdded={this.placeAddedHandler} />
+                <Text>Share what you like with us! </Text>
+                <View>
+                <Text>Preview</Text>
+                </View> 
+                <Button title="Pick Image"></Button>
+                <View>
+                <Text>Map</Text>
+                </View> 
+                <Button title="Location"></Button>
+                <TextInput placeholder="Name">
+                </TextInput>    
+                 <Button title="Share"></Button>
+
+                {/* onPlaceAdded is the property from textinput.js file 
+                <PlaceInput onPlaceAdded={this.placeAddedHandler} /> */}
             </View>
         );
     }

@@ -5,9 +5,10 @@ import startMainTabs from '../MainTabs/startMainTabs';
 import DefaultInput from '../../components/UI/DefaultInput/DefaultInput';
 import HeadingText from '../../components/UI/HeadingText/HeadingText';
 import MainText from '../../components/UI/MainText/MainText';
-import ButtonWithBackground from '../../components/UI/Button/Button';
+import ButtonwithBack from '../../components/UI/Button/Button';
+
 import backgroundImage from '../../assets/background.jpg';
-import buttonWithBackground from '../../components/UI/Button/Button';
+
 
 class AuthScreen extends Component {
 
@@ -24,9 +25,9 @@ class AuthScreen extends Component {
                 <HeadingText>Login here</HeadingText>
             </MainText>    
                 <Button title="Switch to Signup" />
-                <buttonWithBackground color="">
-                    Switch to login
-                </buttonWithBackground>    
+                <ButtonwithBack color="#def8f3">
+                   custom button
+                </ButtonwithBack>    
                 <View style={styles.inputContainer}>
                 <DefaultInput placeholder="Email" style={styles.input}/>
                 <DefaultInput placeholder="Password" style={styles.input}/>
